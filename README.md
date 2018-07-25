@@ -31,10 +31,10 @@ There will be a command `msaconverter` created under the same directory as your 
                             input msa format [phylip-relaxed]
 
 
-## Author
+## 4 Author
 Guanliang MENG
 
-## Citation
+## 5 Citation
 Currently I have no plan to publish `msaconverter`.
 
 However, since `msaconverter` makes use of `Biopython`, you should cite it if you use `msaconverter` in your work:
