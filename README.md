@@ -7,6 +7,8 @@
 ## 2 Installation
 
     pip install msaconverter
+    # or using Bioconda
+    conda install msaconverter
 
 There will be a command `msaconverter` created under the same directory as your `pip` command.
 
