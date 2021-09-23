@@ -39,7 +39,7 @@ There will be a command `msaconverter` created under the same directory as your 
 Guanliang MENG
 
 ## 5 Citation
-Currently I have no plan to publish `msaconverter`, but **I shuld be one of the co-authors in your publications if you use this program.**
+Currently I have no plan to publish `msaconverter`, **however, if you use this program in your analysis, or you "steal" the idea/codes of this program into your script, I should be one of the co-authors in your publication!!!**
 
 However, since `msaconverter` makes use of `Biopython`, you should cite it if you use `msaconverter` in your work:
 
