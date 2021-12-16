@@ -20,6 +20,7 @@ There will be a command `msaconverter` created under the same directory as your 
     usage: msaconverter.py [-h] [-i <INFILE>] [-o <OUTFILE>]
                            [-p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}]
                            [-q {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}]
+                           [-t {DNA,RNA,protein}]
 
     Convert multiple-sequence-alignment into different formats. See
     https://biopython.org/wiki/AlignIO for format introductions. By Guanliang
@@ -33,6 +34,7 @@ There will be a command `msaconverter` created under the same directory as your 
                             input msa format [fasta]
       -q {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}
                             input msa format [phylip-relaxed]
+      -t {DNA,RNA,protein}  Molecule types [DNA]
 
 
 ## 4 Author
