@@ -26,6 +26,10 @@ def get_para():
         choices=msa_formats, default='phylip-relaxed',
         help='input msa format [%(default)s]')
 
+    parser.add_argument('-t', dest='molecule_type',
+        choices=["DNA", "RNA", "protein"], default="DNA",
+        help='Molecule types [%(default)s]')
+
     if len(sys.argv) == 1:
         parser.print_help()
         sys.exit()
@@ -38,7 +42,7 @@ def get_para():
 def main():
     args = get_para()
 
-    AlignIO.convert(args.infile, args.input_format, args.outfile, args.output_format)
+    AlignIO.convert(args.infile, args.input_format, args.outfile, args.output_format, args.molecule_type)
 
 
 if __name__ == '__main__':
