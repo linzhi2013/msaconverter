@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="msaconverter",
-    version="0.0.1",
+    version="0.0.2",
     author='Guanliang Meng',
     author_email='mengguanliang@genomics.cn',
     description="To convert multiple alignment sequences (msa) to different format",
