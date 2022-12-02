@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: msaconverter
-Version: 0.0.3
+Version: 0.0.4
 Summary: To convert multiple alignment sequences (msa) to different format
 Home-page: http://mengguanliang.com
 Author: Guanliang Meng
@@ -20,6 +20,18 @@ Description-Content-Type: text/markdown
 License-File: LICENSE
 
 # msaconverter
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+
+**WHEN YOU ADAPT (PART OF) THE SOFTWARE FOR YOUR USE CASES, THE AUTHOR AND
+THE SOFTWARE MUST BE EXPLICITLY CREDITED IN YOUR PUBLICATIONS AND SOFTWARE,
+AND YOU SHOULD ASK THE USERS OF YOUR SOFTWARE TO CITE THE SOFTWARE IN
+THEIR PUBLICATIONS. IN A WORD, 请讲武德.**
 
 ## 1 Introduction
 
@@ -39,20 +51,37 @@ There will be a command `msaconverter` created under the same directory as your 
 
     $ msaconverter
     usage: msaconverter.py [-h] [-i <INFILE>] [-o <OUTFILE>]
-                           [-p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,phylip-sequential-relaxed,mauve,maf}]
+                       [-p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}]
                        [-q {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,phylip-sequential-relaxed,mauve,maf}]
                        [-t {DNA,RNA,protein}]
 
-    Convert multiple-sequence-alignment into different formats. See https://biopython.org/wiki/AlignIO for format
-    introductions. By Guanliang MENG. 
+    THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+    REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+    AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+    INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+    LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+    OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+    PERFORMANCE OF THIS SOFTWARE.
 
-    v0.0.3: phylip-sequential-relaxed (for output) is a custom format by MGL, which allows long sequence names but like phylip-sequential.
+    **WHEN YOU ADAPT (PART OF) THE SOFTWARE FOR YOUR USE CASES, THE AUTHOR AND
+    THE SOFTWARE MUST BE EXPLICITLY CREDITED IN YOUR PUBLICATIONS AND SOFTWARE,
+    AND YOU SHOULD ASK THE USERS OF YOUR SOFTWARE TO CITE THE SOFTWARE IN
+    THEIR PUBLICATIONS. IN A WORD, 请讲武德.**
+
+    Convert multiple-sequence-alignment into different formats.
+    See https://biopython.org/wiki/AlignIO for format introductions.
+
+    V0.0.3:
+    phylip-sequential-relaxed (for output) is a custom format by MGL, which
+    allows long sequence names but like phylip-sequential.
+
+    By Guanliang MENG, available from https://github.com/linzhi2013/msaconverter.
 
     optional arguments:
       -h, --help            show this help message and exit
       -i <INFILE>           input msa file
       -o <OUTFILE>          output msa file
-      -p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,phylip-sequential-relaxed,mauve,maf}
+      -p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}
                             input msa format [fasta]
       -q {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,phylip-sequential-relaxed,mauve,maf}
                             input msa format [phylip-relaxed]
@@ -63,9 +92,8 @@ There will be a command `msaconverter` created under the same directory as your 
 Guanliang MENG
 
 ## 5 Citation
-Currently I have no plan to publish `msaconverter`, **however, if you use this program in your analysis, or you "steal" the idea/codes of this program into your script, I should be one of the co-authors in your publication!!!**
 
-However, since `msaconverter` makes use of `Biopython`, you should cite it if you use `msaconverter` in your work:
+Since `msaconverter` makes use of `Biopython`, you should cite it if you use `msaconverter` in your work:
 
     Peter J. A. Cock, Tiago Antao, Jeffrey T. Chang, Brad A. Chapman, Cymon J. Cox, Andrew Dalke, Iddo Friedberg, Thomas Hamelryck, Frank Kauff, Bartek Wilczynski, Michiel J. L. de Hoon: “Biopython: freely available Python tools for computational molecular biology and bioinformatics”. Bioinformatics 25 (11), 1422–1423 (2009). https://doi.org/10.1093/bioinformatics/btp163
 

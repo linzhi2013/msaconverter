@@ -4,19 +4,36 @@ from Bio import AlignIO
 import argparse
 
 def get_para():
-    description = """
-    Convert multiple-sequence-alignment into different formats. 
-    See https://biopython.org/wiki/AlignIO for format introductions. 
-    By Guanliang MENG.
+    description = """THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE
+OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 
-    phylip-sequential-relaxed (for output) is a custom format by MGL, which 
-    allows long sequence names but like phylip-sequential. """
+**WHEN YOU ADAPT (PART OF) THE SOFTWARE FOR YOUR USE CASES, THE AUTHOR AND
+THE SOFTWARE MUST BE EXPLICITLY CREDITED IN YOUR PUBLICATIONS AND SOFTWARE,
+AND YOU SHOULD ASK THE USERS OF YOUR SOFTWARE TO CITE THE SOFTWARE IN
+THEIR PUBLICATIONS. IN A WORD, 请讲武德.**
+
+Convert multiple-sequence-alignment into different formats. 
+See https://biopython.org/wiki/AlignIO for format introductions. 
+
+V0.0.3:
+phylip-sequential-relaxed (for output) is a custom format by MGL, which 
+allows long sequence names but like phylip-sequential. 
+
+By Guanliang MENG, available from https://github.com/linzhi2013/msaconverter.
+
+"""
 
     # https://biopython.org/wiki/AlignIO
     msa_formats = ['fasta', 'clustal', 'stockholm', 'nexus', 'phylip', 
         'phylip-sequential', 'phylip-relaxed', 'phylip-sequential-relaxed', 'mauve', 'maf']
 
-    parser = argparse.ArgumentParser(description=description)
+    parser = argparse.ArgumentParser(description=description,
+        formatter_class=argparse.RawDescriptionHelpFormatter)
 
     parser.add_argument('-i', dest='infile', metavar='<INFILE>', 
         help='input msa file')
