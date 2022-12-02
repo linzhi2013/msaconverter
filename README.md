@@ -18,21 +18,22 @@ There will be a command `msaconverter` created under the same directory as your 
 
     $ msaconverter
     usage: msaconverter.py [-h] [-i <INFILE>] [-o <OUTFILE>]
-                           [-p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}]
-                           [-q {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}]
-                           [-t {DNA,RNA,protein}]
+                           [-p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,phylip-sequential-relaxed,mauve,maf}]
+                       [-q {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,phylip-sequential-relaxed,mauve,maf}]
+                       [-t {DNA,RNA,protein}]
 
-    Convert multiple-sequence-alignment into different formats. See
-    https://biopython.org/wiki/AlignIO for format introductions. By Guanliang
-    MENG.
+    Convert multiple-sequence-alignment into different formats. See https://biopython.org/wiki/AlignIO for format
+    introductions. By Guanliang MENG. 
+
+    v0.0.3: phylip-sequential-relaxed (for output) is a custom format by MGL, which allows long sequence names but like phylip-sequential.
 
     optional arguments:
       -h, --help            show this help message and exit
       -i <INFILE>           input msa file
       -o <OUTFILE>          output msa file
-      -p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}
+      -p {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,phylip-sequential-relaxed,mauve,maf}
                             input msa format [fasta]
-      -q {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,mauve,maf}
+      -q {fasta,clustal,stockholm,nexus,phylip,phylip-sequential,phylip-relaxed,phylip-sequential-relaxed,mauve,maf}
                             input msa format [phylip-relaxed]
       -t {DNA,RNA,protein}  Molecule types [DNA]
 
