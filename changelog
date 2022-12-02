@@ -1,2 +1,7 @@
+v0.0.3
+add 'phylip-sequential-relaxed' format for output, which is a custom format by MGL, which allows long sequence names but like phylip-sequential.
+
 v0.0.2
 add the '-t' option. because Nexus format asks for it.
+
+

@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+changelog
+setup.py
+msaconverter/__init__.py
+msaconverter/msaconverter.py
+msaconverter.egg-info/PKG-INFO
+msaconverter.egg-info/SOURCES.txt
+msaconverter.egg-info/dependency_links.txt
+msaconverter.egg-info/entry_points.txt
+msaconverter.egg-info/requires.txt
+msaconverter.egg-info/top_level.txt

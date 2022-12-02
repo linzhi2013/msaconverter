@@ -1,3 +1,24 @@
+Metadata-Version: 2.1
+Name: msaconverter
+Version: 0.0.3
+Summary: To convert multiple alignment sequences (msa) to different format
+Home-page: http://mengguanliang.com
+Author: Guanliang Meng
+Author-email: mengguanliang@genomics.cn
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
 # msaconverter
 
 ## 1 Introduction
@@ -49,6 +70,8 @@ However, since `msaconverter` makes use of `Biopython`, you should cite it if yo
     Peter J. A. Cock, Tiago Antao, Jeffrey T. Chang, Brad A. Chapman, Cymon J. Cox, Andrew Dalke, Iddo Friedberg, Thomas Hamelryck, Frank Kauff, Bartek Wilczynski, Michiel J. L. de Hoon: “Biopython: freely available Python tools for computational molecular biology and bioinformatics”. Bioinformatics 25 (11), 1422–1423 (2009). https://doi.org/10.1093/bioinformatics/btp163
 
 Please go to `http://www.biopython.org/` for more details.
+
+
 
 
 

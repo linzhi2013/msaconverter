@@ -4,11 +4,17 @@ from Bio import AlignIO
 import argparse
 
 def get_para():
-    description = 'Convert multiple-sequence-alignment into different formats. See https://biopython.org/wiki/AlignIO for format introductions. By Guanliang MENG.'
+    description = """
+    Convert multiple-sequence-alignment into different formats. 
+    See https://biopython.org/wiki/AlignIO for format introductions. 
+    By Guanliang MENG.
+
+    phylip-sequential-relaxed (for output) is a custom format by MGL, which 
+    allows long sequence names but like phylip-sequential. """
 
     # https://biopython.org/wiki/AlignIO
     msa_formats = ['fasta', 'clustal', 'stockholm', 'nexus', 'phylip', 
-        'phylip-sequential', 'phylip-relaxed', 'mauve', 'maf']
+        'phylip-sequential', 'phylip-relaxed', 'phylip-sequential-relaxed', 'mauve', 'maf']
 
     parser = argparse.ArgumentParser(description=description)
 
@@ -39,11 +45,40 @@ def get_para():
     return args
 
 
+def get_phylip_sequential_relaxed(infile=None, input_format=None, outfile=None):
+    alignment = AlignIO.read(infile, input_format)
+    num_of_species = 0
+    aln_len = 0
+
+    seq_list = []
+    max_seqid_len = 0
+    for rec in alignment:
+        num_of_species += 1
+        aln_len = len(rec)
+        seqid = rec.id
+        seq = str(rec.seq)
+        seq_list.append((seqid, seq))
+
+        seqid_len = len(seqid)
+        if seqid_len > max_seqid_len:
+            max_seqid_len = seqid_len
+
+    with open(outfile, 'w') as fhout:
+        print(" {num_of_species} {aln_len}".format(num_of_species=num_of_species, aln_len=aln_len), file=fhout)
+        for seqid, seq in seq_list:
+            print(seqid.ljust(max_seqid_len), "  ", seq, file=fhout)
+
+
 def main():
     args = get_para()
 
-    AlignIO.convert(args.infile, args.input_format, args.outfile, args.output_format, args.molecule_type)
-
+    if args.output_format != 'phylip-sequential-relaxed':
+        AlignIO.convert(args.infile, args.input_format, args.outfile, args.output_format, args.molecule_type)
+    else:
+        get_phylip_sequential_relaxed(
+            infile=args.infile, 
+            input_format=args.input_format, 
+            outfile=args.outfile)
 
 if __name__ == '__main__':
     main()
