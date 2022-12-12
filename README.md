@@ -71,8 +71,9 @@ There will be a command `msaconverter` created under the same directory as your 
 Guanliang MENG
 
 ## 5 Citation
+You should cite this repository when you use `msaconverter` in your project.
 
-Since `msaconverter` makes use of `Biopython`, you should cite it if you use `msaconverter` in your work:
+Since `msaconverter` makes use of `Biopython`, you should also cite it at the same time:
 
     Peter J. A. Cock, Tiago Antao, Jeffrey T. Chang, Brad A. Chapman, Cymon J. Cox, Andrew Dalke, Iddo Friedberg, Thomas Hamelryck, Frank Kauff, Bartek Wilczynski, Michiel J. L. de Hoon: “Biopython: freely available Python tools for computational molecular biology and bioinformatics”. Bioinformatics 25 (11), 1422–1423 (2009). https://doi.org/10.1093/bioinformatics/btp163
 
